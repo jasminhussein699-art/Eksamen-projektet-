@@ -495,8 +495,29 @@ body {
 
 /* ===== FOOTER SLUT ===== */
 
+
 /* ==================================================
-   RESPONSIVT DESIGN – MINDRE COMPUTERSKÆRME
+   GENERELT RESPONSIVT DESIGN
+   ================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* ==================================================
+   MINDRE COMPUTERSKÆRME
    ================================================== */
 
 @media screen and (max-width: 1100px) {
@@ -504,19 +525,20 @@ body {
     /* Navigation */
     .navbar {
         padding: 20px 4%;
+        gap: 20px;
     }
 
     .navLinks {
-        gap: 25px;
+        gap: 20px;
     }
 
     .navLinks a {
-        font-size: 19px;
+        font-size: 17px;
     }
 
     .kontaktKnap {
-        font-size: 18px;
-        padding: 10px 25px;
+        font-size: 16px;
+        padding: 10px 20px;
     }
 
     /* Hero */
@@ -526,11 +548,24 @@ body {
     }
 
     .heroTekst h1 {
-        font-size: 58px;
+        font-size: 50px;
     }
 
     .heroBillede img {
+        width: 100%;
         height: 400px;
+        object-fit: cover;
+    }
+
+    /* Aktiviteter */
+    .aktiviteter {
+        width: 100%;
+        gap: 30px;
+    }
+
+    .Volleyball,
+    .Fodbold {
+        min-width: 0;
     }
 
     /* Footer */
@@ -539,17 +574,17 @@ body {
     }
 
     .footerLinks {
-        gap: 35px;
+        gap: 25px;
     }
 
     .footerLinks a {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
 
 /* ==================================================
-   RESPONSIVT DESIGN – TABLET
+   TABLET
    ================================================== */
 
 @media screen and (max-width: 768px) {
@@ -557,8 +592,9 @@ body {
     /* Navigation */
     .navbar {
         flex-direction: column;
-        gap: 25px;
-        padding: 25px 4%;
+        align-items: center;
+        gap: 22px;
+        padding: 25px 5%;
     }
 
     .logo {
@@ -574,23 +610,25 @@ body {
     }
 
     .navLinks {
+        width: 100%;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 20px 30px;
+        gap: 18px 25px;
     }
 
     .navLinks a {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .kontaktKnap {
-        font-size: 17px;
-        padding: 10px 25px;
+        font-size: 16px;
+        padding: 10px 22px;
     }
 
     /* Hero */
     .hero {
         flex-direction: column;
+        width: 100%;
         padding: 35px 6%;
         gap: 30px;
     }
@@ -601,7 +639,7 @@ body {
     }
 
     .heroTekst h1 {
-        font-size: 52px;
+        font-size: 45px;
     }
 
     .heroTekst p {
@@ -613,7 +651,9 @@ body {
     }
 
     .heroBillede img {
+        width: 100%;
         height: 350px;
+        object-fit: cover;
     }
 
     /* Introduktion */
@@ -627,7 +667,9 @@ body {
 
     /* Fællesskabsbillede */
     .community-image {
+        width: 100%;
         height: 350px;
+        object-fit: cover;
     }
 
     /* Fællesskabssektion */
@@ -646,16 +688,63 @@ body {
     }
 
     .feature-image {
+        width: 100%;
         height: 300px;
+        object-fit: cover;
     }
 
-    /* Bliv medlem */
-    .join-section {
-        padding: 35px 6%;
+    /* Aktiviteter */
+    .aktiviteter {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 6%;
     }
 
-    .join-section h2 {
-        font-size: 28px;
+    .Volleyball,
+    .Fodbold {
+        width: 100%;
+        margin: 0;
+    }
+
+    .Volleyball img,
+    .Fodbold img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    /* De 3 ukendte aktiviteter */
+    .de3ukendte {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 20px 6%;
+    }
+
+    .de3ukendte li {
+        width: 100%;
+    }
+
+    /* Medlemskab */
+    .kontigent {
+        width: 100%;
+        padding: 0 6%;
+        margin-top: 40px;
+    }
+
+    /* Priser */
+    .priser {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        gap: 0;
+    }
+
+    .priser .pris {
+        width: 100%;
+        padding: 25px 15px;
     }
 
     /* Footer */
@@ -671,11 +760,11 @@ body {
 
     .footerLinks {
         flex-wrap: wrap;
-        gap: 20px 35px;
+        gap: 20px 30px;
     }
 
     .footerLinks a {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .footerBottom {
@@ -695,57 +784,58 @@ body {
 
 
 /* ==================================================
-   MOBIL – OPTIMERET TIL HELE SKÆRMENS BREDDE
+   MOBIL
    ================================================== */
 
 @media screen and (max-width: 480px) {
 
-    /* GENERELT */
+    /* Generelt */
     body {
-        font-size: 17px;
+        font-size: 16px;
         line-height: 1.5;
-        overflow-x: hidden;
     }
 
     .side {
         width: 100%;
+        max-width: 100%;
         padding: 25px 18px;
     }
 
 
-    /* NAVIGATION */
+    /* Navigation */
     .navbar {
+        width: 100%;
         padding: 22px 18px;
         flex-direction: column;
-        gap: 22px;
+        gap: 20px;
     }
 
     .logoTitel {
-        font-size: 30px;
+        font-size: 27px;
     }
 
     .logoTekst {
-        font-size: 23px;
+        font-size: 21px;
     }
 
     .navLinks {
         width: 100%;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 16px 22px;
+        gap: 15px 20px;
     }
 
     .navLinks a {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .kontaktKnap {
-        font-size: 17px;
-        padding: 12px 30px;
+        font-size: 16px;
+        padding: 11px 25px;
     }
 
 
-    /* HERO */
+    /* Hero */
     .hero {
         flex-direction: column;
         width: 100%;
@@ -759,18 +849,18 @@ body {
     }
 
     .heroTekst p:first-child {
-        font-size: 15px;
-        margin-bottom: 20px;
+        font-size: 14px;
+        margin-bottom: 18px;
     }
 
     .heroTekst h1 {
-        font-size: 43px;
+        font-size: 38px;
         line-height: 1.15;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
     }
 
     .heroTekst p {
-        font-size: 17px;
+        font-size: 16px;
         line-height: 1.6;
     }
 
@@ -780,53 +870,55 @@ body {
 
     .heroBillede img {
         width: 100%;
-        height: 280px;
+        height: 260px;
         object-fit: cover;
     }
 
 
-    /* AKTIVITETER */
+    /* Aktiviteter */
     .aktiviteter {
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap: 50px;
+        gap: 40px;
+        padding: 0 18px;
     }
 
     .Volleyball,
     .Fodbold {
         width: 100%;
+        min-width: 0;
         margin: 0;
     }
 
     .Volleyball img,
     .Fodbold img {
         width: 100%;
-        height: 280px;
+        height: 250px;
         object-fit: cover;
-        margin: 0 0 22px;
+        margin: 0 0 20px;
     }
 
     .Volleyball h2,
     .Fodbold h2 {
-        font-size: 36px;
+        font-size: 30px;
         text-align: left;
-        margin-bottom: 18px;
+        margin-bottom: 15px;
     }
 
     .Volleyball h3,
     .Fodbold h3 {
         max-width: 100%;
-        font-size: 16px;
+        font-size: 15px;
         line-height: 1.6;
         text-align: left;
         margin: 0;
-        padding-bottom: 22px;
+        padding-bottom: 18px;
     }
 
     .Volleyball .pRight,
     .Fodbold .pRight {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 1.6;
         text-align: left;
         margin-top: 15px;
@@ -834,20 +926,20 @@ body {
 
     .Volleyball .moedeTid,
     .Fodbold .moedeTid {
-        font-size: 15px;
+        font-size: 14px;
         text-align: left;
-        margin-top: 18px;
+        margin-top: 15px;
     }
 
 
-    /* DE 3 UKENDTE AKTIVITETER */
+    /* De 3 ukendte aktiviteter */
     .de3ukendte {
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap: 30px;
-        margin: 35px 0;
-        padding: 20px 5px;
+        gap: 25px;
+        margin: 30px 0;
+        padding: 20px 18px;
     }
 
     .de3ukendte li {
@@ -857,56 +949,53 @@ body {
 
     .de3ukendte li h4,
     .de3ukendte .aktivitet h4 {
-        font-size: 20px;
+        font-size: 19px;
         margin-bottom: 7px;
     }
 
     .de3ukendte li h5,
     .de3ukendte .aktivitet h5 {
-        font-size: 15px;
+        font-size: 14px;
         line-height: 1.6;
     }
 
 
-    /* MEDLEMSKAB */
+    /* Medlemskab */
     .kontigent {
         width: 100%;
-        margin-top: 45px;
-        margin-bottom: 30px;
+        padding: 0 18px;
+        margin-top: 35px;
+        margin-bottom: 25px;
     }
 
     .kontigent h3 {
-        font-size: 13px;
-        margin-bottom: 12px;
+        font-size: 12px;
+        margin-bottom: 10px;
     }
 
     .kontigent h2 {
-        font-size: 36px;
+        font-size: 32px;
         line-height: 1.2;
         margin-bottom: 12px;
     }
 
     .kontigent h4 {
-        font-size: 15px;
+        font-size: 14px;
         line-height: 1.6;
     }
 
 
-    /* PRISER */
+    /* Priser */
     .priser {
         display: grid;
         grid-template-columns: 1fr;
         width: 100%;
-        margin-bottom: 40px;
+        margin-bottom: 35px;
     }
 
     .priser .pris {
         width: 100%;
-        padding: 25px 12px;
-        border-bottom: 1px solid #D9DCCF;
-    }
-
-    .priser .pris:nth-last-child(-n+3) {
+        padding: 22px 18px;
         border-bottom: 1px solid #D9DCCF;
     }
 
@@ -915,63 +1004,63 @@ body {
     }
 
     .priser .pris h3 {
-        font-size: 13px;
+        font-size: 12px;
         margin-bottom: 8px;
     }
 
     .priser .pris h2 {
-        font-size: 34px;
+        font-size: 30px;
         margin-bottom: 8px;
     }
 
     .priser .pris h4 {
-        font-size: 15px;
+        font-size: 14px;
         line-height: 1.6;
     }
 
 
-    /* FOOTER */
+    /* Footer */
     .footer {
-        padding: 45px 20px 50px;
+        width: 100%;
+        padding: 40px 20px 45px;
     }
 
     .footerTop {
         flex-direction: column;
         align-items: flex-start;
-        gap: 30px;
+        gap: 25px;
     }
 
     .footerLogoTitel {
-        font-size: 30px;
+        font-size: 27px;
     }
 
     .footerLogoTekst {
-        font-size: 24px;
+        font-size: 21px;
     }
 
     .footerLinks {
         display: flex;
         flex-direction: column;
-        gap: 18px;
+        gap: 16px;
     }
 
     .footerLinks a {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .footerBottom {
         flex-direction: column;
         align-items: flex-start;
-        gap: 22px;
+        gap: 20px;
     }
 
     .footerBottom > p {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .footerSocial img {
-        width: 32px;
-        height: 32px;
+        width: 30px;
+        height: 30px;
     }
 }
-
