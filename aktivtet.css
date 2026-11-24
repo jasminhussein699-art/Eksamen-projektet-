@@ -306,6 +306,7 @@ body {
 /* Ændrer tekstfarven, når musen holdes over et link */
 .navLinks a:hover {
     color: #536477;
+    text-decoration: underline;
 }
 
 /* Styling af kontaktknappen i navigationen */
@@ -437,6 +438,7 @@ body {
 /* Ændrer linkfarven ved hover */
 .footerLinks a:hover {
     color: #B7C5B0;
+    text-decoration: underline;
 }
 
 /* Flexbox fordeler indholdet i footerens nederste del */

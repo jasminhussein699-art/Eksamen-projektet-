@@ -84,6 +84,7 @@ h2 {
 
 .navLinks a:hover {
     color: #536477;
+    text-decoration: underline;
 }
 
 /* Kontaktknap */
@@ -292,6 +293,7 @@ h2 {
 
 .footerLinks a:hover {
     color: #B7C5B0;
+    text-decoration: underline;
 }
 
 /* Nederste del af footeren */
