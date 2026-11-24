@@ -1,0 +1,1238 @@
+
+/* ==================================================
+   GENERELLE INDSTILLINGER
+   ================================================== */
+
+/* * betyder, at CSS-reglerne gælder for alle HTML-elementer.
+
+   margin: 0 fjerner den udvendige afstand.
+   padding: 0 fjerner den indvendige afstand.
+
+   VI HAR IKKE HAFT DET ENDNU:
+   box-sizing: border-box.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==================================================
+   BODY – HELE HJEMMESIDENS GRUNDLÆGGENDE DESIGN
+   ================================================== */
+
+/* body indeholder alt det synlige indhold på hjemmesiden.
+
+   background-color bestemmer baggrundsfarven.
+   color bestemmer standardfarven på teksten.
+   font-family bestemmer skrifttypen.
+   sans-serif betyder, at skrifttypen ikke har små fødder
+   på bogstaverne.
+   line-height bestemmer afstanden mellem tekstlinjerne.
+*/
+body {
+    background-color: #f4f0e8;
+    color: #242d3a;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+}
+
+
+/* ==================================================
+   OVERSKRIFTER
+   ================================================== */
+
+/* h1 og h2 er HTML-overskrifter.
+
+   Kommaet betyder, at begge overskriftstyper får samme styling.
+   font-family bestemmer skrifttypen.
+   serif betyder, at skrifttypen har små fødder på bogstaverne.
+   font-weight bestemmer, hvor tyk skriften er.
+*/
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+
+/* ==================================================
+   BILLEDER
+   ================================================== */
+
+/* img gælder for alle billeder på hjemmesiden.
+
+   display: block gør billedet til et blokelement.
+   width: 100% får billedet til at fylde hele bredden.
+   height: 100% får billedet til at fylde hele højden.
+
+   VI HAR IKKE HAFT DET ENDNU:
+   object-fit: cover.
+*/
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ==================================================
+   LINKS
+   ================================================== */
+
+/* a gælder for alle links.
+
+   text-decoration: none fjerner understregningen.
+
+   VI HAR IKKE HAFT DET ENDNU:
+   inherit.
+*/
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ==================================================
+   NAVIGATION
+   ================================================== */
+
+/* .navbar er navigationens hovedområde.
+
+   display: flex placerer elementerne ved siden af hinanden.
+   align-items: center centrerer elementerne lodret.
+   justify-content: space-between fordeler elementerne
+   med plads imellem sig.
+   padding giver indvendig afstand.
+   Her betyder 25px afstand fra top og bund og 3%
+   afstand fra højre og venstre.
+   background-color bestemmer baggrundsfarven.
+   border-bottom laver en streg under navigationen.
+
+   VI HAR IKKE HAFT DET ENDNU:
+   Flexbox med display: flex.
+*/
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 3%;
+    background-color: #F5F1E8;
+    border-bottom: 3px solid #B7C5B0;
+}
+
+
+/* .logo er logoets område.
+
+   display: flex bruger Flexbox.
+   flex-direction: column placerer teksterne lodret.
+   text-decoration fjerner understregning.
+   color bestemmer tekstfarven.
+   line-height: 1 reducerer afstanden mellem tekstlinjerne.
+*/
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #242d3a;
+    line-height: 1;
+}
+
+
+/* .logoTitel er logoets øverste tekst.
+
+   font-size bestemmer skriftstørrelsen.
+   font-weight bestemmer skriftens tykkelse.
+*/
+.logoTitel {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+/* .logoTekst er logoets nederste tekst.
+
+   font-size bestemmer skriftstørrelsen.
+   font-weight: 400 giver en almindelig skrift.
+*/
+.logoTekst {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+
+/* .navLinks indeholder navigationens links.
+
+   display: flex placerer menupunkterne vandret.
+   gap bestemmer afstanden mellem menupunkterne.
+
+   VI HAR IKKE HAFT DET ENDNU:
+   gap i Flexbox.
+*/
+.navLinks {
+    display: flex;
+    gap: 50px;
+}
+
+
+/* .navLinks a vælger alle links inde i navigationen.
+
+   Mellemrum mellem klasserne betyder, at linket
+   ligger inde i elementet med klassen navLinks.
+   text-decoration fjerner understregningen.
+   color bestemmer tekstfarven.
+   font-size bestemmer størrelsen.
+   transition gør farveskiftet mere glidende.
+   0.3s betyder, at ændringen tager 0,3 sekunder.
+   ease bestemmer, hvordan ændringen starter og slutter.
+
+   VI HAR IKKE HAFT DET ENDNU:
+   transition og ease.
+*/
+.navLinks a {
+    text-decoration: none;
+    color: #242d3a;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+
+/* :hover betyder, at designet ændres,
+   når musen holdes over et link.
+   Her skifter linkets farve til sage.
+
+   VI HAR IKKE HAFT DET ENDNU:
+   :hover som CSS-pseudoklasse.
+*/
+.navLinks a:hover {
+    color: #536477;
+}
+
+
+/* .kontaktKnap er kontaktknappen i navigationen.
+
+   background-color bestemmer knappens baggrundsfarve.
+   color bestemmer tekstfarven.
+   padding giver plads omkring teksten.
+   Her er 12px afstand oppe og nede og 40px til siderne.
+   border-radius gør hjørnerne afrundede.
+   font-size bestemmer tekststørrelsen.
+*/
+.kontaktKnap {
+    background-color: #242d3a;
+    color: white;
+    text-decoration: none;
+    padding: 12px 40px;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+
+/* Knappens baggrund skifter til sage,
+   når musen holdes over knappen.
+*/
+.kontaktKnap:hover {
+    background-color: #536477;
+}
+
+
+/* ==================================================
+   SMÅ OVERSKRIFTER – EYEBROW
+   ================================================== */
+
+/* .eyebrow bruges til små overskrifter.
+
+   font-size bestemmer tekststørrelsen.
+   letter-spacing bestemmer afstanden mellem bogstaverne.
+   font-weight bestemmer skriftens tykkelse.
+   text-transform: uppercase ændrer teksten til store bogstaver.
+   display: block gør elementet til et blokelement.
+
+   VI HAR IKKE HAFT DET ENDNU:
+   text-transform og letter-spacing, hvis de ikke
+   allerede er gennemgået i undervisningen.
+*/
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #242d3a;
+    display: block;
+}
+
+
+/* ==================================================
+   HERO SEKTION
+   ================================================== */
+
+/* .hero er hjemmesidens øverste hovedsektion.
+
+   display: flex placerer tekst og billede ved siden af hinanden.
+   justify-content: space-between fordeler dem i bredden.
+   align-items: flex-start placerer elementerne ved toppen.
+   gap bestemmer afstanden mellem tekst og billede.
+   padding giver indvendig afstand.
+   50px er top, 8% er siderne og 40px er bunden.
+
+   VI HAR IKKE HAFT DET ENDNU:
+   Flexbox og gap, hvis det ikke er gennemgået.
+*/
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 50px 8% 40px;
+}
+
+
+/* .heroTekst indeholder tekstområdet.
+
+   width: 55% betyder, at tekstområdet fylder 55%.
+   padding-top giver afstand fra toppen.
+*/
+.heroTekst {
+    width: 55%;
+    padding-top: 40px;
+}
+
+
+/* p:first-child vælger det første p-element
+   inde i heroTekst.
+
+   font-size bestemmer tekststørrelsen.
+   margin-bottom giver afstand under teksten.
+
+   VI HAR IKKE HAFT DET ENDNU:
+   :first-child.
+*/
+.heroTekst p:first-child {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+
+/* h1 er hero-sektionens store overskrift.
+
+   font-family vælger skrifttypen.
+   font-size bestemmer størrelsen.
+   margin-bottom giver afstand under overskriften.
+*/
+.heroTekst h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 76px;
+    margin-bottom: 30px;
+}
+
+
+/* p bestemmer udseendet på brødteksten.
+
+   font-size bestemmer tekststørrelsen.
+   line-height bestemmer afstanden mellem linjerne.
+*/
+.heroTekst p {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+
+/* .heroBillede er området til hero-billedet.
+   width: 40% betyder, at området fylder 40%.
+*/
+.heroBillede {
+    width: 40%;
+}
+
+
+/* Billedet fylder hele bredden af sit område.
+   height bestemmer billedets højde.
+   object-fit: cover beskærer billedet.
+   border-radius giver afrundede hjørner.
+*/
+.heroBillede img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* ==================================================
+   INTRODUKTION
+   ================================================== */
+
+/* .introduction er introduktionssektionen.
+
+   width: 100% får sektionen til at fylde hele bredden.
+   max-width sætter en maksimal bredde på 1920px.
+   margin: 0 auto centrerer sektionen vandret.
+   auto betyder, at browseren automatisk fordeler
+   den udvendige afstand på begge sider.
+   padding giver afstand omkring indholdet.
+   border-bottom: none fjerner en eventuel nederste kant.
+
+   VI HAR IKKE HAFT DET ENDNU:
+   max-width og margin: auto, hvis det ikke er gennemgået.
+*/
+.introduction {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 10px 8% 25px;
+    border-bottom: none;
+}
+
+
+/* .intro-text indeholder introduktionens tekst.
+
+   max-width begrænser tekstens bredde til 650px.
+   Det gør, at teksten ikke bliver for bred.
+*/
+.intro-text {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+
+/* h2 er introduktionens overskrift.
+
+   font-size bestemmer størrelsen.
+   margin giver afstand over og under overskriften.
+   color bestemmer tekstfarven.
+*/
+.introduction h2 {
+    font-size: 32px;
+    margin: 8px 0 16px;
+    color: #242d3a;
+}
+
+
+/* p bestemmer udseendet af introduktionens brødtekst.
+
+   font-size bestemmer tekststørrelsen.
+   color bestemmer tekstfarven.
+*/
+.introduction p {
+    font-size: 14px;
+    color: #242d3a;
+}
+
+
+/* ==================================================
+   STORT FÆLLESSKABSBILLEDE
+   ================================================== */
+
+/* .community-image er området omkring det store billede.
+
+   width: 100% får området til at fylde hele bredden.
+   height bestemmer billedområdets højde.
+   overflow: hidden skjuler den del af billedet,
+   der går uden for området.
+   margin: 0 fjerner ekstra udvendig afstand.
+
+   VI HAR IKKE HAFT DET ENDNU:
+   overflow: hidden.
+*/
+.community-image {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+
+/* Billedet fylder hele billedområdet.
+
+   width og height på 100% får billedet til at fylde området.
+   object-fit: cover beskærer billedet, så det passer.
+   display: block fjerner ekstra plads under billedet.
+*/
+.community-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+}
+
+
+/* ==================================================
+   MØRKEBLÅ FÆLLESSKABSSEKTION
+   ================================================== */
+
+/* .community-feature er den mørkeblå sektion.
+
+   background-color bestemmer baggrundsfarven.
+   color bestemmer standardtekstfarven.
+   width: 100% får sektionen til at fylde hele bredden.
+   padding giver indvendig afstand oppe og nede.
+   margin: 0 fjerner udvendig afstand.
+*/
+.community-feature {
+    background-color: #242d3a;
+    color: #f4f0e8;
+    width: 100%;
+    padding: 30px 0;
+    margin: 0;
+}
+
+
+/* .feature-container indeholder tekst og billede.
+
+   width: 100% bruger hele den tilgængelige bredde.
+   max-width begrænser bredden til 1920px.
+   margin: 0 auto centrerer området.
+   padding giver afstand i siderne.
+   display: grid opretter et gitterlayout.
+   grid-template-columns opdeler området i kolonner.
+   55% og 45% bestemmer kolonnernes størrelser.
+   align-items: center centrerer elementerne lodret.
+   gap giver afstand mellem kolonnerne.
+
+   VI HAR IKKE HAFT DET ENDNU:
+   CSS Grid og grid-template-columns.
+*/
+.feature-container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 8%;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    align-items: center;
+    gap: 30px;
+}
+
+
+/* .feature-text indeholder teksten.
+
+   display: flex bruger Flexbox.
+   flex-direction: column placerer elementerne lodret.
+   justify-content: center centrerer indholdet
+   langs Flexboxens hovedretning.
+*/
+.feature-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/* Vælger eyebrow-elementet inde i feature-text.
+   Farven ændres til elfenben, så teksten kan ses
+   på den mørkeblå baggrund.
+*/
+.feature-text .eyebrow {
+    color: #f4f0e8;
+}
+
+
+/* h2 er fællesskabssektionens overskrift.
+
+   font-size bestemmer størrelsen.
+   margin giver afstand omkring overskriften.
+   color gør teksten lys på den mørke baggrund.
+*/
+.feature-text h2 {
+    font-size: 32px;
+    margin: 8px 0 16px;
+    color: #f4f0e8;
+}
+
+
+/* p bestemmer brødtekstens udseende.
+
+   font-size bestemmer størrelsen.
+   color gør teksten lys.
+   max-width begrænser tekstens bredde.
+*/
+.feature-text p {
+    font-size: 14px;
+    color: #f4f0e8;
+    max-width: 480px;
+}
+
+
+/* .feature-image bestemmer højden på billedområdet.
+*/
+.feature-image {
+    height: 300px;
+}
+
+
+/* Billedet får afrundede hjørner.
+*/
+.feature-image img {
+    border-radius: 4px;
+}
+
+
+/* ==================================================
+   BLIV MEDLEM
+   ================================================== */
+
+/* .join-section er sektionen om medlemskab.
+
+   width: 100% bruger hele bredden.
+   max-width begrænser bredden til 1920px.
+   margin: 0 auto centrerer sektionen.
+   padding giver afstand omkring indholdet.
+*/
+.join-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 60px 8% 45px;
+   
+}
+
+
+/* .join-text begrænser tekstens bredde til 650px.
+*/
+.join-text {
+    max-width: 650px;
+}
+
+.join-text p{
+    padding-bottom: 10px;
+}
+
+
+/* h2 er overskriften i medlemssektionen.
+
+   font-size bestemmer størrelsen.
+   margin giver afstand omkring overskriften.
+   color bestemmer tekstfarven.
+*/
+.join-section h2 {
+    font-size: 32px;
+    margin: 8px 0 16px;
+    color: #242d3a;
+}
+
+
+/* p bestemmer brødtekstens størrelse og farve.
+*/
+.join-section p {
+    font-size: 14px;
+    color: #242d3a;
+}
+
+
+/* ==================================================
+   BLIV MEDLEM KNAP
+   ================================================== */
+
+/* .join-button er knappen til medlemskab.
+
+   display: inline-block gør, at knappen kan stå
+   ved siden af andre elementer, samtidig med at den
+   kan få indvendig afstand og bestemte størrelser.
+   margin-top giver afstand over knappen.
+   padding giver plads omkring teksten.
+   background-color bestemmer baggrundsfarven.
+   color bestemmer tekstfarven.
+   font-size bestemmer tekststørrelsen.
+   font-weight bestemmer tykkelsen.
+   letter-spacing giver afstand mellem bogstaverne.
+   border-radius afrunder hjørnerne.
+   transition gør farveskiftet glidende.
+
+   VI HAR IKKE HAFT DET ENDNU:
+   display: inline-block og transition.
+*/
+.join-button {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 24px;
+    background-color: #242d3a;
+    color: #f4f0e8;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+
+/* Knappens baggrund skifter til sage,
+   når musen holdes over knappen.
+*/
+.join-button:hover {
+    background-color: #536477;
+}
+
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+/* .footer er hjemmesidens nederste område.
+
+   background-color bestemmer baggrundsfarven.
+   color bestemmer standardtekstfarven.
+   padding giver indvendig afstand.
+*/
+.footer {
+    background-color: #252D3A;
+    color: #F5F1E8;
+    padding: 80px 8% 120px;
+}
+
+
+/* .footerTop er den øverste del af footeren.
+
+   display: flex placerer logo og links ved siden af hinanden.
+   justify-content: space-between fordeler elementerne.
+   align-items: center centrerer dem lodret.
+   padding-bottom giver afstand under området.
+*/
+.footerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+
+/* .footerLogo bestemmer udseendet på footerens logo.
+   text-decoration fjerner understregningen.
+   color bestemmer tekstfarven.
+*/
+.footerLogo {
+    text-decoration: none;
+    color: #F5F1E8;
+}
+
+
+/* p:first-child vælger det første p-element
+   inde i footerLogo.
+   font-size bestemmer størrelsen.
+   font-weight bestemmer tykkelsen.
+*/
+.footerLogo p:first-child {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+/* Styling af footerlogoets øverste tekst.
+*/
+.footerLogoTitel {
+    font-size: 32px;
+    font-weight: 700;
+    color: #F5F1E8;
+}
+
+
+/* Styling af footerlogoets nederste tekst.
+*/
+.footerLogoTekst {
+    font-size: 26px;
+    font-weight: 400;
+    color: #B7C5B0;
+}
+
+
+/* .footerLinks indeholder footerens navigationslinks.
+
+   display: flex placerer links vandret.
+   gap bestemmer afstanden mellem linksene.
+*/
+.footerLinks {
+    display: flex;
+    gap: 80px;
+}
+
+
+/* Styling af footerens links.
+
+   text-decoration fjerner understregningen.
+   color bestemmer tekstfarven.
+   font-size bestemmer størrelsen.
+*/
+.footerLinks a {
+    text-decoration: none;
+    color: #F5F1E8;
+    font-size: 24px;
+}
+
+
+/* Linksene skifter farve, når musen holdes over dem.
+*/
+.footerLinks a:hover {
+    color: #B7C5B0;
+}
+
+
+/* .footerBottom er footerens nederste del.
+
+   display: flex placerer elementerne vandret.
+   justify-content: space-between fordeler dem.
+   align-items: center centrerer dem lodret.
+   padding-top giver afstand over indholdet.
+   position: relative gør området til et referencepunkt,
+   når andre elementer placeres med position: absolute.
+
+   VI HAR IKKE HAFT DET ENDNU:
+   position: relative.
+*/
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    position: relative;
+}
+
+
+/* ::before opretter et ekstra element før indholdet.
+
+   content: "" er nødvendigt for at oprette pseudo-elementet.
+   position: absolute placerer stregen præcist.
+   top og left bestemmer placeringen.
+   width bestemmer stregens bredde.
+   height bestemmer stregens tykkelse.
+
+   VI HAR IKKE HAFT DET ENDNU:
+   ::before, content og position: absolute.
+*/
+.footerBottom::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+
+    /* linear-gradient laver en farveovergang.
+       to right betyder, at farverne går fra venstre mod højre.
+       transparent betyder gennemsigtig.
+       #536477 er den blågrå farve i højre side.
+
+       VI HAR IKKE HAFT DET ENDNU:
+       linear-gradient.
+    */
+    background: linear-gradient(
+        to right,
+        transparent 40%,
+        #536477 100%
+    );
+}
+
+
+/* > betyder, at reglen kun gælder for direkte børn.
+   Her vælges p-elementer, som ligger direkte inde i footerBottom.
+
+   color bestemmer tekstfarven.
+   font-size bestemmer størrelsen.
+   letter-spacing bestemmer afstanden mellem bogstaverne.
+
+   VI HAR IKKE HAFT DET ENDNU:
+   > som direkte-barn-selektor.
+*/
+.footerBottom > p {
+    color: #B7C5B0;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+
+/* .footerSocial indeholder de sociale links.
+
+   display: flex placerer dem ved siden af hinanden.
+   align-items: center centrerer dem lodret.
+   gap bestemmer afstanden mellem dem.
+*/
+.footerSocial {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+/* Styling af billederne til sociale medier.
+
+   width og height bestemmer størrelsen.
+   filter ændrer billedets udseende.
+   brightness(0) gør billedet sort.
+   invert(1) vender farverne, så billedet bliver hvidt.
+
+   VI HAR IKKE HAFT DET ENDNU:
+   filter, brightness() og invert().
+*/
+.footerSocial img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+
+/* Styling af links i footerens sociale område.
+
+   color bestemmer tekstfarven.
+   text-decoration fjerner understregningen.
+*/
+.footerSocial a {
+    color: #F5F1E8;
+    text-decoration: none;
+}
+
+/* ===== FOOTER SLUT ===== */
+/* ==================================================
+   RESPONSIVT DESIGN – MINDRE COMPUTERSKÆRME
+   ================================================== */
+
+@media screen and (max-width: 1100px) {
+
+    /* Navigation */
+    .navbar {
+        padding: 20px 4%;
+    }
+
+    .navLinks {
+        gap: 25px;
+    }
+
+    .navLinks a {
+        font-size: 19px;
+    }
+
+    .kontaktKnap {
+        font-size: 18px;
+        padding: 10px 25px;
+    }
+
+    /* Hero */
+    .hero {
+        gap: 30px;
+        padding: 40px 5%;
+    }
+
+    .heroTekst h1 {
+        font-size: 58px;
+    }
+
+    .heroBillede img {
+        height: 400px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 65px 5% 80px;
+    }
+
+    .footerLinks {
+        gap: 35px;
+    }
+
+    .footerLinks a {
+        font-size: 20px;
+    }
+}
+
+
+/* ==================================================
+   RESPONSIVT DESIGN – TABLET
+   ================================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Navigation */
+    .navbar {
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px 4%;
+    }
+
+    .logo {
+        align-items: center;
+    }
+
+    .logoTitel {
+        font-size: 28px;
+    }
+
+    .logoTekst {
+        font-size: 21px;
+    }
+
+    .navLinks {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px 30px;
+    }
+
+    .navLinks a {
+        font-size: 18px;
+    }
+
+    .kontaktKnap {
+        font-size: 17px;
+        padding: 10px 25px;
+    }
+
+    /* Hero */
+    .hero {
+        flex-direction: column;
+        padding: 35px 6%;
+        gap: 30px;
+    }
+
+    .heroTekst {
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .heroTekst h1 {
+        font-size: 52px;
+    }
+
+    .heroTekst p {
+        font-size: 17px;
+    }
+
+    .heroBillede {
+        width: 100%;
+    }
+
+    .heroBillede img {
+        height: 350px;
+    }
+
+    /* Introduktion */
+    .introduction {
+        padding: 30px 6%;
+    }
+
+    .introduction h2 {
+        font-size: 28px;
+    }
+
+    /* Fællesskabsbillede */
+    .community-image {
+        height: 350px;
+    }
+
+    /* Fællesskabssektion */
+    .community-feature {
+        padding: 45px 0;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
+        padding: 0 6%;
+        gap: 30px;
+    }
+
+    .feature-text h2 {
+        font-size: 28px;
+    }
+
+    .feature-image {
+        height: 300px;
+    }
+
+    /* Bliv medlem */
+    .join-section {
+        padding: 35px 6%;
+    }
+
+    .join-section h2 {
+        font-size: 28px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 50px 6% 60px;
+    }
+
+    .footerTop {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .footerLinks {
+        flex-wrap: wrap;
+        gap: 20px 35px;
+    }
+
+    .footerLinks a {
+        font-size: 18px;
+    }
+
+    .footerBottom {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .footerSocial {
+        gap: 15px;
+    }
+
+    .footerSocial img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+
+/* ==================================================
+   RESPONSIVT DESIGN – MOBIL
+   ================================================== */
+
+@media screen and (max-width: 480px) {
+
+    /* Navigation */
+    .navbar {
+        padding: 20px 5%;
+        gap: 20px;
+    }
+
+    .logoTitel {
+        font-size: 25px;
+    }
+
+    .logoTekst {
+        font-size: 19px;
+    }
+
+    .navLinks {
+        gap: 15px 20px;
+    }
+
+    .navLinks a {
+        font-size: 15px;
+    }
+
+    .kontaktKnap {
+        font-size: 15px;
+        padding: 9px 22px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 25px 5%;
+        gap: 25px;
+    }
+
+    .heroTekst {
+        padding-top: 0;
+    }
+
+    .heroTekst p:first-child {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .heroTekst h1 {
+        font-size: 38px;
+        margin-bottom: 20px;
+    }
+
+    .heroTekst p {
+        font-size: 15px;
+    }
+
+    .heroBillede img {
+        height: 260px;
+    }
+
+    /* Introduktion */
+    .introduction {
+        padding: 25px 5%;
+    }
+
+    .introduction h2 {
+        font-size: 25px;
+    }
+
+    .introduction p {
+        font-size: 14px;
+    }
+
+    /* Fællesskabsbillede */
+    .community-image {
+        height: 250px;
+    }
+
+    /* Fællesskabssektion */
+    .community-feature {
+        padding: 35px 0;
+    }
+
+    .feature-container {
+        padding: 0 5%;
+        gap: 25px;
+    }
+
+    .feature-text h2 {
+        font-size: 25px;
+    }
+
+    .feature-text p {
+        font-size: 14px;
+    }
+
+    .feature-image {
+        height: 230px;
+    }
+
+    /* Bliv medlem */
+    .join-section {
+        padding: 30px 5%;
+    }
+
+    .join-section h2 {
+        font-size: 25px;
+    }
+
+    .join-section p {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 40px 5% 45px;
+    }
+
+    .footerLogoTitel {
+        font-size: 28px;
+    }
+
+    .footerLogoTekst {
+        font-size: 22px;
+    }
+
+    .footerLinks {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footerLinks a {
+        font-size: 17px;
+    }
+
+    .footerBottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footerBottom > p {
+        font-size: 12px;
+    }
+
+    .footerSocial img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+

@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tilknytter det eksterne stylesheet -->
+    <link rel="stylesheet" href="kontakt.css">
+    <!-- Opretter forbindelse til Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Indlæser skrifttyperne Inter og Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Sidens titel i browserfanen -->
+    <title>Kontakt os</title>
+</head>
+
+<body>
+
+    <!-- ===== NAVIGATION START ===== -->
+
+    <!-- Header med sidens primære navigation -->
+    <header>
+        <nav class="navbar">
+
+            <!-- Logo med link til forsiden -->
+            <a href="index.html" class="logo">
+                <p class="logoTitel">LIND.</p>
+                <p class="logoTekst">OLD BOYS</p>
+            </a>
+
+            <!-- Navigationslinks til hjemmesidens undersider -->
+            <div class="navLinks">
+                <a href="galleri.html">Galleri</a>
+                <a href="aktivtet.html">Aktiviteter</a>
+                <a href="omos.html">Om os</a>
+            </div>
+
+            <!-- Kontaktknap med link til kontaktsiden -->
+            <a href="kontakt.html" class="kontaktKnap">
+                Kontakt os
+            </a>
+
+        </nav>
+    </header>
+
+    <!-- ===== NAVIGATION SLUT ===== -->
+
+
+    <!-- ===== HERO SEKTION START ===== -->
+
+    <!-- Hero-sektion med introduktion og billede -->
+    <section class="hero">
+
+        <!-- Tekstområde med overskrift og beskrivelse -->
+        <div class="heroTekst">
+            <p>LIND OLD BOYS · KONTAKT</p>
+
+            <h1>Kontakt os</h1>
+
+            <p>
+                Har du spørgsmål til LOB, eller overvejer du
+                at blive medlem? Tag kontakt til bestyrelsen,
+                eller kig forbi LOBbyen og oplev fællesskabet.
+            </p>
+        </div>
+
+        <!-- Billede af indgangen til LOBbyen -->
+        <div class="heroBillede">
+            <img src="midtvejsbilleder/image-(9).webp" alt="Indgangen til LOBbyen">
+        </div>
+
+    </section>
+
+    <!-- ===== HERO SEKTION SLUT ===== -->
+
+
+    <!-- ===== BESTYRELSE START ===== -->
+
+    <!-- Sektion med bestyrelsens kontaktoplysninger -->
+    <section>
+
+        <!-- Overskrift til bestyrelsessektionen -->
+        <div class="rubrikTitel">
+            <h2>Bestyrelsen</h2>
+        </div>
+
+        <!-- Første række med formand og næstformand -->
+        <!-- Samme class anvendes på alle rækker for ens styling -->
+        <div class="rubrik">
+            <div>
+                <h3>Formand</h3>
+                <h4>Allan Thomsen</h4>
+                <p>41 74 16 79</p>
+                <p>ath@jysk.com</p>
+            </div>
+
+            <div>
+                <h3>Næst formand</h3>
+                <h4>Niels Arne Markussen</h4>
+                <p>21 21 14 09</p>
+                <p>nielsarne@averhoff.one</p>
+            </div>
+        </div>
+
+        <!-- Anden række med kasserer og sekretær -->
+        <div class="rubrik">
+            <div>
+                <h3>Kasserer</h3>
+                <h4>Henry Gade</h4>
+                <p>28 11 69 74</p>
+                <p>h.gade@kabelmail.dk</p>
+            </div>
+
+            <div>
+                <h3>Sekretær</h3>
+                <h4>Bent Jensen</h4>
+                <p>61 69 03 97</p>
+                <p>bluesbent@jensen.mail.dk</p>
+            </div>
+        </div>
+
+        <!-- Tredje række med de øvrige næstformænd -->
+        <div class="rubrik">
+            <div>
+                <h3>2. Næstformand</h3>
+                <h4>Jørgen Eybye</h4>
+                <p>22 78 77 35</p>
+                <p>jbeybye@gmail.com</p>
+            </div>
+
+            <div>
+                <h3>3. Næstformand</h3>
+                <h4>Ole Hansen</h4>
+                <p>22 99 28 96</p>
+                <p>jette.olehansen@gmail.com</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ===== BESTYRELSE SLUT ===== -->
+
+
+    <!-- ===== BESØG OS START ===== -->
+
+    <!-- Sektion med information om besøg, åbningstider og tilmelding -->
+    <!-- Klassen bruges til at give sektionen en anden baggrundsfarve -->
+    <section class="besoeg">
+
+        <!-- Introduktion til LOBbyen -->
+        <div class="besoegIntro">
+            <p>Besøg os</p>
+            <h2>Oplev LOBbyen.</h2>
+
+            <p>
+                Du er altid velkommen til at kigge ind,
+                mærke klubånden og få en snak om et medlemskab.
+            </p>
+        </div>
+
+        <!-- Åbningstider opdelt i to kolonner -->
+        <!-- Div-elementerne placeres ved siden af hinanden med Flexbox -->
+        <div class="aabningstider">
+            <div>
+                <h3>ONSDAG</h3>
+                <p>19.30–21.30</p>
+            </div>
+
+            <div>
+                <h3>LØRDAG</h3>
+                <p>11.00–13.00</p>
+            </div>
+        </div>
+
+        <!-- ===== FORMULAR START ===== -->
+
+        <!-- Formular med felter til navn, e-mail og besked -->
+        <div class="tilmelding">
+            <h2>Tilmeld dig</h2>
+
+            <form>
+
+                <!-- Tekstfelt til brugerens navn -->
+                <input type="text" placeholder="Navn" required>
+
+                <!-- E-mailfelt med indbygget browservalidering -->
+                <input type="email" placeholder="Email" required>
+
+                <!-- Tekstområde til en længere besked -->
+                <textarea placeholder="Besked" required></textarea>
+
+                <!-- Required gør felterne obligatoriske -->
+                <!-- Knap til indsendelse af formularen -->
+                <button type="submit">Send</button>
+
+            </form>
+        </div>
+
+        <!-- ===== FORMULAR SLUT ===== -->
+
+    </section>
+
+    <!-- ===== BESØG OS SLUT ===== -->
+
+
+    <!-- ===== FOOTER START ===== -->
+
+    <!-- Footer med logo, navigation og copyright -->
+    <footer class="footer">
+
+        <!-- Øverste del med logo og navigationslinks -->
+        <div class="footerTop">
+
+            <!-- Logo med link til forsiden -->
+            <a href="index.html" class="footerLogo">
+                <p class="footerLogoTitel">LIND.</p>
+                <p class="footerLogoTekst">OLD BOYS</p>
+            </a>
+
+            <!-- Navigationslinks til hjemmesidens undersider -->
+            <div class="footerLinks">
+                <a href="galleri.html">Galleri</a>
+                <a href="aktivtet.html">Aktiviteter</a>
+                <a href="omos.html">Om os</a>
+            </div>
+
+        </div>
+
+        <!-- Nederste del med copyright og sociale medier -->
+        <div class="footerBottom">
+
+            <!-- Copyright-information -->
+            <p>© 2026 Lind Old Boys. Fællesskab siden begyndelsen.</p>
+
+            <!-- Område med studentertekst og Facebook-link -->
+            <div class="footerSocial">
+                <p>Studerende copyright</p>
+
+                <!-- Facebook-logo med link til foreningens Facebook-side -->
+                <!-- Target åbner linket i en ny fane -->
+                <a href="https://www.facebook.com/lindoldboys"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <!-- SVG-billede af Facebook-logoet -->
+                    <img src="midtvejsbilleder/facebook-brands-solid-full.svg"
+                         alt="Facebook">
+                </a>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- ===== FOOTER SLUT ===== -->
+
+</body>
+</html>

@@ -1,0 +1,977 @@
+
+/* Generel styling */
+
+/* Her nulstiller jeg standard margin og padding */
+/* Box-sizing gør det nemmere at styre elementernes størrelser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Her refrere man overskriften til alle overskrifter som er inden for body i html. */
+body {
+    background-color: #F5F1E8;
+    color: #26364c;
+    font-family: "inter", sans-serif;
+    line-height: 1;
+}
+
+.side {
+    padding: 30px 90px;
+}
+
+
+/* Fodbold og volleyball */
+
+.aktiviteter {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.Volleyball,
+.Fodbold {
+    width: 48%;
+    min-width: 0;
+}
+
+
+/* Billeder */
+
+.Volleyball img,
+.Fodbold img {
+    display: block;
+    width: 100%;
+    height: 285px;
+    object-fit: cover;
+}
+
+
+/* Volleyball */
+
+.Volleyball img {
+    margin-bottom: 135px;
+}
+
+.Volleyball h2 {
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 18px;
+}
+
+.Volleyball h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.4;
+    text-align: left;
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: 0;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #D9DCCF;
+}
+
+/* Teksten under overskriften */
+.Volleyball .pRight {
+    margin-top: 15px;
+    text-align: left;
+}
+
+/* Mødetidspunktet under stregen */
+.Volleyball .moedeTid {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Fodbold */
+
+.Fodbold {
+    margin-top: 30px;
+}
+
+.Fodbold h2 {
+    font-size: 42px;
+    font-weight: normal;
+    text-align: right;
+    margin-bottom: 18px;
+}
+
+/* Gør at den første h3 (Indendørs fodbold) beholder stregen og højrejusteringen */
+.Fodbold h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.4;
+    text-align: right;
+    max-width: 400px;
+    margin-left: auto;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #D9DCCF;
+    text-align: right;
+}
+
+.pRight {
+    margin-top: 15px;
+    text-align: right;
+}
+
+/* Sørg for at selve mødetidspunktet (teksten under stregen) står rigtigt */
+.Fodbold .moedeTid {
+    text-align: right; /* Så den matcher resten af højrejusteringen i Fodbold-boksen */
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.Fodbold img {
+    margin-top: 127px;
+}
+
+
+
+/* Gør listen bred, fordeler punkterne helt ud til siderne med space-between */
+.de3ukendte {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    gap: 40px; /* Juster evt. afstanden mellem punkterne her */
+    list-style-type: disc; /* Viser prikkerne */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 60px; /* Sørg for plads til den første prik ude ved kanten */
+    width: 100%;
+    padding: 30px;
+}
+
+/* Sørg for at alle punkter tager præcis samme plads (samme størrelse) */
+.de3ukendte li {
+    display: list-item; 
+    flex: 1; /* Gør at de deler bredden ligeligt og følger tekstens linje */
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.de3ukendte li h4 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.de3ukendte li h5 {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    color: #555;
+    margin: 0;
+}
+
+
+.de3ukendte .aktivitet h4 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.de3ukendte .aktivitet h5 {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    color: #555;
+    margin: 0;
+}
+
+/* --- Medlemskab & Priser --- */
+.kontigent {
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.kontigent h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    color: #242D3A;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.kontigent h2 {
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.kontigent h4 {
+   font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    color: #333;
+}
+
+
+/* --- Priser (3 kolonner med streger) --- */
+/*Grid bruges her for at gøre det nemmere og fordele konlonerne i rækket og at den amtomatisk flytter til næste kolone/række */
+.priser {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #D9DCCF;
+    border-bottom: 1px solid #D9DCCF;
+    margin-bottom: 50px;
+}
+/* styling af box*/
+.priser .pris {
+    padding: 30px 15px;
+    border-bottom: 1px solid #D9DCCF;
+}
+
+/* Fjerner streg under den nederste række */
+.priser .pris:nth-last-child(-n+3) {
+    border-bottom: none;
+}
+/*stylingen af priser og layout */
+.priser .pris h3 {
+   font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: #242D3A;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+/*stylingen af priser og layout */
+.priser .pris h2 {
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+/*stylingen af priser og layout */
+.priser .pris h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    color: #333;
+    margin: 0;
+}
+
+
+/* ==================================================
+   HEADER / NAVIGATION
+   ================================================== */
+
+/* Navigationens layout, afstande og baggrund */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 3%;
+    background-color: #F5F1E8;
+    border-bottom: 3px solid #B7C5B0;
+}
+
+/* Logoets placering og grundlæggende styling */
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #242D3A;
+    line-height: 1;
+}
+
+/* Skriftstørrelse og tykkelse på logoets øverste tekst */
+.logoTitel {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* Skriftstørrelse og tykkelse på logoets nederste tekst */
+.logoTekst {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+/* Menupunkternes placering og indbyrdes afstand */
+.navLinks {
+    display: flex;
+    gap: 50px;
+}
+
+/* Styling af navigationens links */
+.navLinks a {
+    text-decoration: none;
+    color: #242D3A;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+/* Ændrer tekstfarven, når musen holdes over et link */
+.navLinks a:hover {
+    color: #536477;
+}
+
+/* Styling af kontaktknappen i navigationen */
+.kontaktKnap {
+    background-color: #242D3A;
+    color: white;
+    text-decoration: none;
+    padding: 12px 40px;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+/* Ændrer kontaktknappens baggrundsfarve ved hover */
+.kontaktKnap:hover {
+    background-color: #536477;
+}
+
+
+/* ===== HERO SEKTION START ===== */
+
+/* Flexbox placerer tekst og billede ved siden af hinanden */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 50px 8% 40px;
+}
+
+/* Bredde og afstand fra toppen på tekstområdet */
+.heroTekst {
+    width: 55%;
+    padding-top: 40px;
+}
+
+/* Styling af den første tekst over overskriften */
+.heroTekst p:first-child {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Skrifttype, størrelse og afstand på hero-overskriften */
+.heroTekst h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 76px;
+    margin-bottom: 30px;
+}
+
+/* Tekststørrelse og linjeafstand på beskrivelsen */
+.heroTekst p {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* Bredde på billedområdet */
+.heroBillede {
+    width: 40%;
+}
+
+/* Billedets størrelse, beskæring og afrundede hjørner */
+.heroBillede img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ===== HERO SEKTION SLUT ===== */
+
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+/* Footerens baggrund, tekstfarve og indvendige afstand */
+.footer {
+    background-color: #252D3A;
+    color: #F5F1E8;
+    padding: 80px 8% 120px;
+}
+
+/* Flexbox placerer logo og navigation ved siden af hinanden */
+.footerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+/* Grundlæggende styling af footerens logo */
+.footerLogo {
+    text-decoration: none;
+    color: #F5F1E8;
+}
+
+/* Styling af det første afsnit i footerens logo */
+.footerLogo p:first-child {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* Styling af logoets øverste tekst */
+.footerLogoTitel {
+    font-size: 32px;
+    font-weight: 700;
+    color: #F5F1E8;
+}
+
+/* Styling af logoets nederste tekst */
+.footerLogoTekst {
+    font-size: 26px;
+    font-weight: 400;
+    color: #B7C5B0;
+}
+
+/* Flexbox placerer footerens navigationslinks vandret */
+.footerLinks {
+    display: flex;
+    gap: 80px;
+}
+
+/* Styling af footerens navigationslinks */
+.footerLinks a {
+    text-decoration: none;
+    color: #F5F1E8;
+    font-size: 24px;
+}
+
+/* Ændrer linkfarven ved hover */
+.footerLinks a:hover {
+    color: #B7C5B0;
+}
+
+/* Flexbox fordeler indholdet i footerens nederste del */
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    position: relative;
+}
+
+/* Opretter en vandret streg med en gradient */
+/* Stregen er transparent til venstre og tydeligere mod højre */
+.footerBottom::before {
+    /* Opretter et tomt pseudo-element, der bruges som en gradientstreg */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent 40%,
+        #536477 100%
+    );
+}
+
+/* Styling af copyright-teksten */
+.footerBottom > p {
+    color: #B7C5B0;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+/* Flexbox placerer copyright-tekst og Facebook-link ved siden af hinanden */
+.footerSocial {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Størrelse og hvid farve på Facebook-logoet */
+.footerSocial img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+/* Styling af links i footerens sociale område */
+.footerSocial a {
+    color: #F5F1E8;
+    text-decoration: none;
+}
+
+/* ===== FOOTER SLUT ===== */
+
+/* ==================================================
+   RESPONSIVT DESIGN – MINDRE COMPUTERSKÆRME
+   ================================================== */
+
+@media screen and (max-width: 1100px) {
+
+    /* Navigation */
+    .navbar {
+        padding: 20px 4%;
+    }
+
+    .navLinks {
+        gap: 25px;
+    }
+
+    .navLinks a {
+        font-size: 19px;
+    }
+
+    .kontaktKnap {
+        font-size: 18px;
+        padding: 10px 25px;
+    }
+
+    /* Hero */
+    .hero {
+        gap: 30px;
+        padding: 40px 5%;
+    }
+
+    .heroTekst h1 {
+        font-size: 58px;
+    }
+
+    .heroBillede img {
+        height: 400px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 65px 5% 80px;
+    }
+
+    .footerLinks {
+        gap: 35px;
+    }
+
+    .footerLinks a {
+        font-size: 20px;
+    }
+}
+
+
+/* ==================================================
+   RESPONSIVT DESIGN – TABLET
+   ================================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Navigation */
+    .navbar {
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px 4%;
+    }
+
+    .logo {
+        align-items: center;
+    }
+
+    .logoTitel {
+        font-size: 28px;
+    }
+
+    .logoTekst {
+        font-size: 21px;
+    }
+
+    .navLinks {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px 30px;
+    }
+
+    .navLinks a {
+        font-size: 18px;
+    }
+
+    .kontaktKnap {
+        font-size: 17px;
+        padding: 10px 25px;
+    }
+
+    /* Hero */
+    .hero {
+        flex-direction: column;
+        padding: 35px 6%;
+        gap: 30px;
+    }
+
+    .heroTekst {
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .heroTekst h1 {
+        font-size: 52px;
+    }
+
+    .heroTekst p {
+        font-size: 17px;
+    }
+
+    .heroBillede {
+        width: 100%;
+    }
+
+    .heroBillede img {
+        height: 350px;
+    }
+
+    /* Introduktion */
+    .introduction {
+        padding: 30px 6%;
+    }
+
+    .introduction h2 {
+        font-size: 28px;
+    }
+
+    /* Fællesskabsbillede */
+    .community-image {
+        height: 350px;
+    }
+
+    /* Fællesskabssektion */
+    .community-feature {
+        padding: 45px 0;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
+        padding: 0 6%;
+        gap: 30px;
+    }
+
+    .feature-text h2 {
+        font-size: 28px;
+    }
+
+    .feature-image {
+        height: 300px;
+    }
+
+    /* Bliv medlem */
+    .join-section {
+        padding: 35px 6%;
+    }
+
+    .join-section h2 {
+        font-size: 28px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 50px 6% 60px;
+    }
+
+    .footerTop {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .footerLinks {
+        flex-wrap: wrap;
+        gap: 20px 35px;
+    }
+
+    .footerLinks a {
+        font-size: 18px;
+    }
+
+    .footerBottom {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .footerSocial {
+        gap: 15px;
+    }
+
+    .footerSocial img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+
+/* ==================================================
+   MOBIL – OPTIMERET TIL HELE SKÆRMENS BREDDE
+   ================================================== */
+
+@media screen and (max-width: 480px) {
+
+    /* GENERELT */
+    body {
+        font-size: 17px;
+        line-height: 1.5;
+        overflow-x: hidden;
+    }
+
+    .side {
+        width: 100%;
+        padding: 25px 18px;
+    }
+
+
+    /* NAVIGATION */
+    .navbar {
+        padding: 22px 18px;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .logoTitel {
+        font-size: 30px;
+    }
+
+    .logoTekst {
+        font-size: 23px;
+    }
+
+    .navLinks {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px 22px;
+    }
+
+    .navLinks a {
+        font-size: 17px;
+    }
+
+    .kontaktKnap {
+        font-size: 17px;
+        padding: 12px 30px;
+    }
+
+
+    /* HERO */
+    .hero {
+        flex-direction: column;
+        width: 100%;
+        padding: 30px 18px;
+        gap: 25px;
+    }
+
+    .heroTekst {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .heroTekst p:first-child {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .heroTekst h1 {
+        font-size: 43px;
+        line-height: 1.15;
+        margin-bottom: 20px;
+    }
+
+    .heroTekst p {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .heroBillede {
+        width: 100%;
+    }
+
+    .heroBillede img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+    }
+
+
+    /* AKTIVITETER */
+    .aktiviteter {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 50px;
+    }
+
+    .Volleyball,
+    .Fodbold {
+        width: 100%;
+        margin: 0;
+    }
+
+    .Volleyball img,
+    .Fodbold img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        margin: 0 0 22px;
+    }
+
+    .Volleyball h2,
+    .Fodbold h2 {
+        font-size: 36px;
+        text-align: left;
+        margin-bottom: 18px;
+    }
+
+    .Volleyball h3,
+    .Fodbold h3 {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: left;
+        margin: 0;
+        padding-bottom: 22px;
+    }
+
+    .Volleyball .pRight,
+    .Fodbold .pRight {
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .Volleyball .moedeTid,
+    .Fodbold .moedeTid {
+        font-size: 15px;
+        text-align: left;
+        margin-top: 18px;
+    }
+
+
+    /* DE 3 UKENDTE AKTIVITETER */
+    .de3ukendte {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 30px;
+        margin: 35px 0;
+        padding: 20px 5px;
+    }
+
+    .de3ukendte li {
+        width: 100%;
+        flex: none;
+    }
+
+    .de3ukendte li h4,
+    .de3ukendte .aktivitet h4 {
+        font-size: 20px;
+        margin-bottom: 7px;
+    }
+
+    .de3ukendte li h5,
+    .de3ukendte .aktivitet h5 {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+
+    /* MEDLEMSKAB */
+    .kontigent {
+        width: 100%;
+        margin-top: 45px;
+        margin-bottom: 30px;
+    }
+
+    .kontigent h3 {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .kontigent h2 {
+        font-size: 36px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+
+    .kontigent h4 {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+
+    /* PRISER */
+    .priser {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .priser .pris {
+        width: 100%;
+        padding: 25px 12px;
+        border-bottom: 1px solid #D9DCCF;
+    }
+
+    .priser .pris:nth-last-child(-n+3) {
+        border-bottom: 1px solid #D9DCCF;
+    }
+
+    .priser .pris:last-child {
+        border-bottom: none;
+    }
+
+    .priser .pris h3 {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .priser .pris h2 {
+        font-size: 34px;
+        margin-bottom: 8px;
+    }
+
+    .priser .pris h4 {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+
+    /* FOOTER */
+    .footer {
+        padding: 45px 20px 50px;
+    }
+
+    .footerTop {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .footerLogoTitel {
+        font-size: 30px;
+    }
+
+    .footerLogoTekst {
+        font-size: 24px;
+    }
+
+    .footerLinks {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .footerLinks a {
+        font-size: 18px;
+    }
+
+    .footerBottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+    }
+
+    .footerBottom > p {
+        font-size: 13px;
+    }
+
+    .footerSocial img {
+        width: 32px;
+        height: 32px;
+    }
+}
+

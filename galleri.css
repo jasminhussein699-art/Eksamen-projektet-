@@ -1,0 +1,738 @@
+
+/* ===== BASE SITE CSS START ===== */
+/* Nulstiller standard margin og padding */
+/* Border-box inkluderer padding og border i elementernes størrelse */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ==================================================
+   BODY – GRUNDLÆGGENDE DESIGN
+   ================================================== */
+
+body {
+    background: #F5F1E8;
+    color: #242d3a;
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;
+}
+
+
+/* ==================================================
+   NAVIGATION
+   ================================================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 3%;
+    background-color: #F5F1E8;
+    border-bottom: 3px solid #B7C5B0;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #242d3a;
+    line-height: 1;
+}
+
+.logoTitel {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.logoTekst {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+/* Navigationens links */
+.navLinks {
+    display: flex;
+    gap: 50px;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: #242d3a;
+    font-size: 24px;
+}
+
+.navLinks a:hover {
+    color: #536477;
+}
+
+/* Kontaktknap */
+.kontaktKnap {
+    background-color: #242d3a;
+    color: #F5F1E8;
+    text-decoration: none;
+    padding: 12px 40px;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+.kontaktKnap:hover {
+    background-color: #536477;
+    color: #25364A;
+}
+
+
+/* ==================================================
+   SMÅ OVERSKRIFTER
+   ================================================== */
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #242d3a;
+    display: block;
+}
+
+
+/* ===== HERO SEKTION START ===== */
+
+/* Flexbox placerer tekst og billede ved siden af hinanden */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 50px 8% 40px;
+}
+
+/* Bredde og afstand fra toppen på tekstområdet */
+.heroTekst {
+    width: 55%;
+    padding-top: 40px;
+}
+
+/* Styling af den første tekst over overskriften */
+.heroTekst p:first-child {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Skrifttype, størrelse og afstand på hero-overskriften */
+.heroTekst h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 76px;
+    margin-bottom: 30px;
+}
+
+/* Tekststørrelse og linjeafstand på beskrivelsen */
+.heroTekst p {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* Bredde på billedområdet */
+.heroBillede {
+    width: 40%;
+}
+
+/* Billedets størrelse, beskæring og afrundede hjørner */
+.heroBillede img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.heroTekst .kontaktKnap {
+    display: inline-block;
+    margin-top: 25px;
+}
+
+/* ===== HERO SEKTION SLUT ===== */
+
+
+/* ==================================================
+   GALLERI
+   ================================================== */
+
+.galleri {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 60px 8%;
+    background-color: #F5F1E8;
+}
+
+/* Tekstområdet følger samme opbygning som
+   introduktionssektionerne på de andre sider */
+.galleri .intro-text {
+    max-width: 650px;
+    margin-bottom: 35px;
+}
+
+/* Lille overtekst */
+.galleri .indledning {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    color: #242d3a;
+}
+
+/* Galleriets overskrift */
+.galleri h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 8px 0 16px;
+    color: #242d3a;
+}
+
+/* Introduktionstekst */
+.galleri .intro-text p:last-child {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #242d3a;
+    max-width: 600px;
+}
+
+/* Galleriets billedgitter */
+.galleri-billeder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Billeder */
+.galleri-billeder img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Lille zoom ved hover */
+.galleri-billeder img:hover {
+    transform: scale(1.02);
+}
+
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+.footer {
+    background-color: #252D3A;
+    color: #F5F1E8;
+    padding: 80px 8% 120px;
+}
+
+.footerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+/* Footer-logo */
+.footerLogo {
+    text-decoration: none;
+    color: #F5F1E8;
+}
+
+.footerLogoTitel {
+    font-size: 32px;
+    font-weight: 700;
+    color: #F5F1E8;
+}
+
+.footerLogoTekst {
+    font-size: 26px;
+    font-weight: 400;
+    color: #B7C5B0;
+}
+
+/* Footer-links */
+.footerLinks {
+    display: flex;
+    gap: 80px;
+}
+
+.footerLinks a {
+    text-decoration: none;
+    color: #F5F1E8;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.footerLinks a:hover {
+    color: #B7C5B0;
+}
+
+/* Nederste del af footeren */
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    position: relative;
+}
+
+/* Vandret streg i footeren */
+.footerBottom::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent 40%,
+        #536477 100%
+    );
+}
+
+.footerBottom > p {
+    color: #B7C5B0;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+/* Sociale medier */
+.footerSocial {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.footerSocial p {
+    font-size: 14px;
+}
+
+.footerSocial img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+.footerSocial a {
+    color: #F5F1E8;
+    text-decoration: none;
+}
+
+
+
+/* ==================================================
+   RESPONSIVT DESIGN – MINDRE COMPUTERE
+   ================================================== */
+
+@media screen and (max-width: 1100px) {
+
+    /* Navigation */
+    .navbar {
+        padding: 20px 4%;
+    }
+
+    .navLinks {
+        gap: 25px;
+    }
+
+    .navLinks a {
+        font-size: 19px;
+    }
+
+    .kontaktKnap {
+        font-size: 18px;
+        padding: 10px 25px;
+    }
+
+    /* Hero */
+    .hero {
+        gap: 30px;
+        padding: 40px 5%;
+    }
+
+    .heroTekst h1 {
+        font-size: 58px;
+    }
+
+    .heroBillede img {
+        height: 400px;
+    }
+
+    /* Galleri */
+    .galleri {
+        padding: 55px 5%;
+    }
+
+    .galleri-billeder {
+        gap: 16px;
+    }
+
+    .galleri-billeder img {
+        height: 250px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 65px 5% 80px;
+    }
+
+    .footerLinks {
+        gap: 35px;
+    }
+
+    .footerLinks a {
+        font-size: 20px;
+    }
+}
+
+
+/* ==================================================
+   RESPONSIVT DESIGN – TABLET
+   ================================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Navigation */
+    .navbar {
+        flex-direction: column;
+        gap: 22px;
+        padding: 25px 4%;
+    }
+
+    .logo {
+        align-items: center;
+    }
+
+    .logoTitel {
+        font-size: 29px;
+    }
+
+    .logoTekst {
+        font-size: 23px;
+    }
+
+    .navLinks {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px 28px;
+    }
+
+    .navLinks a {
+        font-size: 18px;
+    }
+
+    .kontaktKnap {
+        font-size: 17px;
+        padding: 12px 28px;
+    }
+
+    /* Hero */
+    .hero {
+        flex-direction: column;
+        padding: 35px 5%;
+        gap: 30px;
+    }
+
+    .heroTekst {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .heroTekst h1 {
+        font-size: 50px;
+    }
+
+    .heroTekst p {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .heroBillede {
+        width: 100%;
+    }
+
+    .heroBillede img {
+        height: 380px;
+    }
+
+    /* Galleri */
+    .galleri {
+        padding: 45px 5%;
+    }
+
+    .galleri .intro-text {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .galleri h2 {
+        font-size: 34px;
+    }
+
+    .galleri .intro-text p:last-child {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .galleri-billeder {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .galleri-billeder img {
+        height: 260px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 50px 5% 60px;
+    }
+
+    .footerTop {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .footerLinks {
+        flex-wrap: wrap;
+        gap: 22px 30px;
+    }
+
+    .footerLinks a {
+        font-size: 19px;
+    }
+
+    .footerBottom {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .footerSocial {
+        gap: 15px;
+    }
+
+    .footerSocial img {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+
+/* ==================================================
+   RESPONSIVT DESIGN – MOBIL
+   ================================================== */
+
+@media screen and (max-width: 480px) {
+
+    /* Generelt */
+    body {
+        font-size: 17px;
+        overflow-x: hidden;
+    }
+
+    /* Navigation */
+    .navbar {
+        width: 100%;
+        padding: 22px 18px;
+        gap: 22px;
+    }
+
+    .logoTitel {
+        font-size: 30px;
+    }
+
+    .logoTekst {
+        font-size: 23px;
+    }
+
+    .navLinks {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 17px 22px;
+    }
+
+    .navLinks a {
+        font-size: 17px;
+    }
+
+    .kontaktKnap {
+        font-size: 17px;
+        padding: 12px 28px;
+    }
+
+    /* Hero */
+    .hero {
+        flex-direction: column;
+        width: 100%;
+        padding: 30px 18px;
+        gap: 25px;
+    }
+
+    .heroTekst {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .heroTekst p:first-child {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .heroTekst h1 {
+        font-size: 43px;
+        line-height: 1.15;
+        margin-bottom: 20px;
+    }
+
+    .heroTekst p {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .heroTekst .kontaktKnap {
+        margin-top: 20px;
+    }
+
+    .heroBillede {
+        width: 100%;
+    }
+
+    .heroBillede img {
+        width: 100%;
+        height: 290px;
+        object-fit: cover;
+    }
+
+    /* Galleri */
+    .galleri {
+        width: 100%;
+        padding: 40px 18px;
+    }
+
+    .galleri .intro-text {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 28px;
+    }
+
+    .galleri .indledning {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .galleri h2 {
+        font-size: 34px;
+        line-height: 1.2;
+        margin: 10px 0 18px;
+    }
+
+    .galleri .intro-text p:last-child {
+        font-size: 16px;
+        line-height: 1.7;
+        max-width: 100%;
+    }
+
+    /* Galleri – én kolonne */
+    .galleri-billeder {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 18px;
+    }
+
+    .galleri-billeder img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    /* Footer */
+    .footer {
+        width: 100%;
+        padding: 45px 20px 50px;
+    }
+
+    .footerTop {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        padding-bottom: 25px;
+    }
+
+    .footerLogoTitel {
+        font-size: 30px;
+    }
+
+    .footerLogoTekst {
+        font-size: 24px;
+    }
+
+    .footerLinks {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .footerLinks a {
+        font-size: 18px;
+    }
+
+    .footerBottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+        padding-top: 25px;
+    }
+
+    .footerBottom > p {
+        font-size: 13px;
+        letter-spacing: 1px;
+        line-height: 1.5;
+    }
+
+    .footerSocial {
+        gap: 18px;
+    }
+
+    .footerSocial p {
+        font-size: 14px;
+    }
+
+    .footerSocial img {
+        width: 32px;
+        height: 32px;
+    }
+}
+

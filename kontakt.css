@@ -1,0 +1,777 @@
+
+/* ===== BASE SITE CSS START ===== */
+/* Nulstiller standard margin og padding */
+/* Border-box inkluderer padding og border i elementernes størrelse */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* ===== BASE SITE CSS END ===== */
+
+/* Generel styling af sidens baggrund, tekstfarve og skrifttype */
+body {
+    background-color: #F5F1E8;
+    color: #25364A;
+    font-family: "Inter", sans-serif;
+}
+
+/* Navigationens layout, afstande og baggrund */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 3%;
+    background-color: #F5F1E8;
+    border-bottom: 3px solid #B7C5B0;
+}
+
+/* Logoets placering og grundlæggende styling */
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #25364A;
+    line-height: 1;
+}
+
+/* Skriftstørrelse og tykkelse på logoets øverste tekst */
+.logoTitel {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* Skriftstørrelse og tykkelse på logoets nederste tekst */
+.logoTekst {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+/* Menupunkternes placering og indbyrdes afstand */
+.navLinks {
+    display: flex;
+    gap: 50px;
+}
+
+/* Styling af navigationens links */
+.navLinks a {
+    text-decoration: none;
+    color: #25364A;
+    font-size: 24px;
+}
+
+/* Ændrer tekstfarven, når musen holdes over et link */
+.navLinks a:hover {
+    color: #536477;
+}
+
+/* Styling af kontaktknappen i navigationen */
+.kontaktKnap {
+    background-color: #25364A;
+    color: #F5F1E8;
+    text-decoration: none;
+    padding: 12px 40px;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+/* Ændrer kontaktknappens baggrundsfarve ved hover */
+.kontaktKnap:hover {
+    background-color: #B7C5B0;
+    color: #25364A;
+}
+
+
+/* ===== HERO SEKTION START ===== */
+
+/* Flexbox placerer tekst og billede ved siden af hinanden */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 50px 8% 40px;
+    border-bottom: 3px solid #B7C5B0;
+}
+
+/* Bredde og afstand fra toppen på tekstområdet */
+.heroTekst {
+    width: 55%;
+    padding-top: 40px;
+}
+
+/* Styling af den første tekst over overskriften */
+.heroTekst p:first-child {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Skrifttype, størrelse og afstand på hero-overskriften */
+.heroTekst h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 76px;
+    margin-bottom: 30px;
+}
+
+/* Tekststørrelse og linjeafstand på beskrivelsen */
+.heroTekst p {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* Bredde på billedområdet */
+.heroBillede {
+    width: 40%;
+}
+
+/* Billedets størrelse, beskæring og afrundede hjørner */
+.heroBillede img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ===== HERO SEKTION SLUT ===== */
+
+
+/* ===== BESTYRELSE START ===== */
+
+/* Centrerer overskriften og tilføjer afstand fra toppen */
+.rubrikTitel {
+    text-align: center;
+    padding-top: 40px;
+}
+
+/* Skrifttype, størrelse og tykkelse på overskriften */
+.rubrikTitel h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    font-weight: normal;
+}
+
+/* Flexbox fordeler bestyrelsesmedlemmerne på to kolonner */
+/* Padding giver luft, mens border-bottom adskiller rækkerne */
+.rubrik {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 17%;
+    border-bottom: 1px solid #B7C5B0;
+}
+
+/* Styling af bestyrelsesmedlemmernes roller */
+.rubrik h4 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+/* Styling af bestyrelsesmedlemmernes navne */
+.rubrik h5 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+/* Tekststørrelse og linjeafstand på kontaktoplysninger */
+.rubrik p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ===== BESTYRELSE SLUT ===== */
+
+
+/* ===== BESØG OS START ===== */
+
+/* Baggrundsfarve og tekstfarve på besøg-sektionen */
+.besoeg {
+    background-color: #25364A;
+    color: #F5F1E8;
+}
+
+/* Indvendig afstand omkring introduktionen */
+.besoegIntro {
+    padding: 50px 8%;
+}
+
+/* Styling af introduktionens overskrift */
+.besoegIntro h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+/* Begrænser tekstens maksimale bredde */
+.besoegIntro p {
+    max-width: 500px;
+}
+
+/* Flexbox fordeler åbningstiderne i to kolonner */
+/* Kantlinjer adskiller området fra de øvrige sektioner */
+.aabningstider {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 8%;
+    border-top: 1px solid #B7C5B0;
+    border-bottom: 1px solid #B7C5B0;
+}
+
+/* Bredde på hver kolonne */
+.aabningstider > div {
+    width: 40%;
+}
+
+/* Styling af ugedagene */
+.aabningstider h3 {
+    color: #B7C5B0;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Styling af åbningstidernes tidspunkter */
+.aabningstider p {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* ===== BESØG OS SLUT ===== */
+
+
+/* ===== FORMULAR START ===== */
+
+/* Centrerer formularområdet og tilføjer indvendig afstand */
+.tilmelding {
+    padding: 60px 0 100px;
+    text-align: center;
+}
+
+/* Styling af formularens overskrift */
+.tilmelding h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Flexbox placerer formularfelterne lodret */
+/* Gap bestemmer afstanden mellem felterne */
+.tilmelding form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 65%;
+    margin: auto;
+}
+
+/* Fælles styling af inputfelter og beskedfelt */
+.tilmelding input,
+.tilmelding textarea {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    background-color: #F5F1E8;
+    color: #25364A;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+}
+
+/* Beskedfeltets højde og mulighed for lodret størrelsesændring */
+.tilmelding textarea {
+    height: 250px;
+    resize: vertical;
+}
+
+/* Styling af formularens send-knap */
+.tilmelding button {
+    width: 220px;
+    padding: 18px;
+    margin: auto;
+    border: none;
+    border-radius: 8px;
+    background-color: #B7C5B0;
+    color: #25364A;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Ændrer knappens baggrundsfarve ved hover */
+.tilmelding button:hover {
+    background-color: #F5F1E8;
+}
+
+/* ===== FORMULAR SLUT ===== */
+
+
+/* ===== FOOTER START ===== */
+
+/* Footerens baggrund, tekstfarve og indvendige afstand */
+.footer {
+    background-color: #25364A;
+    color: #F5F1E8;
+    padding: 80px 8% 120px;
+}
+
+/* Flexbox placerer logo og navigation ved siden af hinanden */
+.footerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+/* Grundlæggende styling af footerens logo */
+.footerLogo {
+    text-decoration: none;
+    color: #F5F1E8;
+}
+
+/* Styling af det første afsnit i footerens logo */
+.footerLogo p:first-child {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* Styling af logoets øverste tekst */
+.footerLogoTitel {
+    font-size: 32px;
+    font-weight: 700;
+    color: #F5F1E8;
+}
+
+/* Styling af logoets nederste tekst */
+.footerLogoTekst {
+    font-size: 26px;
+    font-weight: 400;
+    color: #B7C5B0;
+}
+
+/* Flexbox placerer footerens navigationslinks vandret */
+.footerLinks {
+    display: flex;
+    gap: 80px;
+}
+
+/* Styling af footerens navigationslinks */
+.footerLinks a {
+    text-decoration: none;
+    color: #F5F1E8;
+    font-size: 24px;
+}
+
+/* Ændrer linkfarven ved hover */
+.footerLinks a:hover {
+    color: #B7C5B0;
+}
+
+/* Flexbox fordeler indholdet i footerens nederste del */
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    position: relative;
+}
+
+/* Opretter en vandret streg med en gradient */
+/* Stregen er transparent til venstre og tydeligere mod højre */
+.footerBottom::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent 40%,
+        #B7C5B0 100%
+    );
+}
+
+/* Styling af copyright-teksten */
+.footerBottom > p {
+    color: #B7C5B0;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+/* Flexbox placerer copyright-tekst og Facebook-link ved siden af hinanden */
+.footerSocial {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Størrelse og hvid farve på Facebook-logoet */
+.footerSocial img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+/* Styling af links i footerens sociale område */
+.footerSocial a {
+    color: #F5F1E8;
+    text-decoration: none;
+}
+
+/* ===== FOOTER SLUT ===== */
+/* ==================================================
+   RESPONSIVT DESIGN – MINDRE COMPUTERSKÆRME
+   ================================================== */
+
+@media screen and (max-width: 1100px) {
+
+    /* Navigation */
+    .navbar {
+        padding: 20px 4%;
+    }
+
+    .navLinks {
+        gap: 25px;
+    }
+
+    .navLinks a {
+        font-size: 19px;
+    }
+
+    .kontaktKnap {
+        font-size: 18px;
+        padding: 10px 25px;
+    }
+
+    /* Hero */
+    .hero {
+        gap: 30px;
+        padding: 40px 5%;
+    }
+
+    .heroTekst h1 {
+        font-size: 58px;
+    }
+
+    .heroBillede img {
+        height: 400px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 65px 5% 80px;
+    }
+
+    .footerLinks {
+        gap: 35px;
+    }
+
+    .footerLinks a {
+        font-size: 20px;
+    }
+}
+
+
+/* ==================================================
+   RESPONSIVT DESIGN – TABLET
+   ================================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Navigation */
+    .navbar {
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px 4%;
+    }
+
+    .logo {
+        align-items: center;
+    }
+
+    .logoTitel {
+        font-size: 28px;
+    }
+
+    .logoTekst {
+        font-size: 21px;
+    }
+
+    .navLinks {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px 30px;
+    }
+
+    .navLinks a {
+        font-size: 18px;
+    }
+
+    .kontaktKnap {
+        font-size: 17px;
+        padding: 10px 25px;
+    }
+
+    /* Hero */
+    .hero {
+        flex-direction: column;
+        padding: 35px 6%;
+        gap: 30px;
+    }
+
+    .heroTekst {
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .heroTekst h1 {
+        font-size: 52px;
+    }
+
+    .heroTekst p {
+        font-size: 17px;
+    }
+
+    .heroBillede {
+        width: 100%;
+    }
+
+    .heroBillede img {
+        height: 350px;
+    }
+
+    /* Introduktion */
+    .introduction {
+        padding: 30px 6%;
+    }
+
+    .introduction h2 {
+        font-size: 28px;
+    }
+
+    /* Fællesskabsbillede */
+    .community-image {
+        height: 350px;
+    }
+
+    /* Fællesskabssektion */
+    .community-feature {
+        padding: 45px 0;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
+        padding: 0 6%;
+        gap: 30px;
+    }
+
+    .feature-text h2 {
+        font-size: 28px;
+    }
+
+    .feature-image {
+        height: 300px;
+    }
+
+    /* Bliv medlem */
+    .join-section {
+        padding: 35px 6%;
+    }
+
+    .join-section h2 {
+        font-size: 28px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 50px 6% 60px;
+    }
+
+    .footerTop {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .footerLinks {
+        flex-wrap: wrap;
+        gap: 20px 35px;
+    }
+
+    .footerLinks a {
+        font-size: 18px;
+    }
+
+    .footerBottom {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .footerSocial {
+        gap: 15px;
+    }
+
+    .footerSocial img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+
+/* ==================================================
+   RESPONSIVT DESIGN – MOBIL
+   ================================================== */
+
+@media screen and (max-width: 480px) {
+
+    /* Navigation */
+    .navbar {
+        padding: 20px 5%;
+        gap: 20px;
+    }
+
+    .logoTitel {
+        font-size: 25px;
+    }
+
+    .logoTekst {
+        font-size: 19px;
+    }
+
+    .navLinks {
+        gap: 15px 20px;
+    }
+
+    .navLinks a {
+        font-size: 15px;
+    }
+
+    .kontaktKnap {
+        font-size: 15px;
+        padding: 9px 22px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 25px 5%;
+        gap: 25px;
+    }
+
+    .heroTekst {
+        padding-top: 0;
+    }
+
+    .heroTekst p:first-child {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .heroTekst h1 {
+        font-size: 38px;
+        margin-bottom: 20px;
+    }
+
+    .heroTekst p {
+        font-size: 15px;
+    }
+
+    .heroBillede img {
+        height: 260px;
+    }
+
+    /* Introduktion */
+    .introduction {
+        padding: 25px 5%;
+    }
+
+    .introduction h2 {
+        font-size: 25px;
+    }
+
+    .introduction p {
+        font-size: 14px;
+    }
+
+    /* Fællesskabsbillede */
+    .community-image {
+        height: 250px;
+    }
+
+    /* Fællesskabssektion */
+    .community-feature {
+        padding: 35px 0;
+    }
+
+    .feature-container {
+        padding: 0 5%;
+        gap: 25px;
+    }
+
+    .feature-text h2 {
+        font-size: 25px;
+    }
+
+    .feature-text p {
+        font-size: 14px;
+    }
+
+    .feature-image {
+        height: 230px;
+    }
+
+    /* Bliv medlem */
+    .join-section {
+        padding: 30px 5%;
+    }
+
+    .join-section h2 {
+        font-size: 25px;
+    }
+
+    .join-section p {
+        font-size: 14px;
+    }
+        .rubrik {
+        flex-direction: column;
+        gap: 30px;
+        padding: 35px 8%;
+
+    }
+
+    /* Footer */
+    .footer {
+        padding: 40px 5% 45px;
+    }
+
+    .footerLogoTitel {
+        font-size: 28px;
+    }
+
+    .footerLogoTekst {
+        font-size: 22px;
+    }
+
+    .footerLinks {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footerLinks a {
+        font-size: 17px;
+    }
+
+    .footerBottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footerBottom > p {
+        font-size: 12px;
+    }
+
+    .footerSocial img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+
