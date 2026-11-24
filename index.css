@@ -163,6 +163,7 @@ main,
 */
 .navLinks a:hover {
     color: #536477;
+    text-decoration: underline;
 }
 
 
