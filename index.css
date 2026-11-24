@@ -480,6 +480,7 @@ main,
 */
 .footerLinks a:hover {
     color: #B7C5B0;
+    text-decoration: underline;
 }
 
 
